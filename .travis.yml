@@ -4,13 +4,9 @@ node_js:
 cache:
   directories:
     - node_modules
-script:
-  - npm test
-  - npm run build
 deploy:
   provider: firebase
   skip_cleanup: true
   token:
     secure: ${firebase_api_key}
-  local_dir: build
   project: anthonylau.dev
